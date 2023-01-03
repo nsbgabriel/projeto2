@@ -8,20 +8,21 @@ header,
 section h2,
 section h3,
 form button {
-    font-family: 'Bungee', cursive;
+    font-family: 'Bebas Neue', cursive;
     font-weight: normal;
 }
 
 body,
 input,
 textarea {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Anybody', cursive;
+    font-weight: normal;
 }
 
 header {
     padding: 16px 0;
-    background-color: #182061;
-    color: #e3eff0;
+    background-color: #9b5419;
+    color: #f1f1e4;
 }
 
 header nav li {
@@ -31,7 +32,7 @@ header nav li {
 }
 
 header nav li a {
-    color: #e3eff0;
+    color: #f1f1e4;
     text-decoration: none;
 }
 
@@ -72,8 +73,9 @@ section p {
     margin-bottom: 8px;
 }
 
-section {
-    color: #182061;
+section,
+.address {
+    color: #9b5419;
 }
 
 .store-front {
@@ -89,7 +91,8 @@ section {
     margin-right: 8px;
 }
 
-.social-links li a {
+.social-links li a,
+.address {
     text-decoration: none;
 }
 
@@ -121,22 +124,22 @@ section h3 {
 }
 
 form button {
-    background-color: #182061;
-    color: #fff;
+    background-color: #9b5419;
+    color: #f1f1e4;
     border: none;
     cursor: pointer;
 }
 
 form button:hover {
-    background-color: #314e9e;
+    background-color: #c58d5e;
 }
 
 input:focus, textarea:focus {
-    outline-color: #182061;
+    outline-color: #9b5419;
 }
 
 footer {
-    background-color: #182061;
-    color: #e3eff0;
+    background-color: #9b5419;
+    color: #f1f1e4;
     padding: 16px 0;
 }
