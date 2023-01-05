@@ -2,85 +2,89 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;;
-}
-
-body {
-    background-color: #c4c0c0;
-    padding-top: 100px;
-
+    font-family: Roboto, sans-serif;
 }
 
 header {
+    background-color: #5f27cd;
+    padding: 16px 0;
+    color: #fff;
     display: flex;
-    align-items: center;
-    margin-bottom: 40px;
-    margin-right: 40px;
+    border-bottom: 16px solid #341f97;
+    justify-content: center;
+    text-transform: uppercase;
+    font-style: italic;
 }
 
-header img {
-    height: 45px;
-    margin-right: 16px;
-}
-
-header h1 {
-    font-size: 40px;
-    font-weight: bold;
-}
-
-.container {
-    max-width: 960px;
-    width: 100%;
-    margin: 0 auto;
+header button {
+    margin-left: 16px;
 }
 
 form {
-    display: flex;
-    max-width: 640px;
-    width: 100%;
-    justify-content: space-between;
-    margin-bottom: 40px;
+    background-color: #c8d6e5;
+    padding: 24px 0;
+    text-align: center;
+    display: none;
 }
 
-form input {
-    font-size: 20px;
-    background-color: #fff;
-    border: none;
-    border-bottom: 2px solid black;
+form h2 {
+    margin-bottom: 16px;
+}
+
+input, button {
     padding: 8px;
 }
 
-form button {
-    background-color: #5252e4;
-    color: #fff;
-    font-size: 24px;
-    font-weight: bold;
+button {
+    background-color: #009432;
     border: none;
     cursor: pointer;
-    padding: 8px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
 }
 
-table {
+button:hover {
+    background-color: #26a350;
+}
+
+#botao-cancelar {
+    background-color: rgb(204, 40, 40);
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+ul li {
+    max-width: 25%;
+    list-style: none;
+    position: relative;
+    max-height: 280px;
+    overflow-y: hidden;
+}
+
+ul li img {
     width: 100%;
 }
 
-table th{
-    border-bottom: 2px solid black;
+.overlay-imagem-link {
     padding: 16px;
-    font-size: 24px;
-    font-weight: bold;
+    background-color: rgba(0, 0, 0, 0.7);
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all ease .5s;
 }
 
-table td {
-    padding: 16px 0;
-    text-align: center;
-    font-size: 18px;
-    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+.overlay-imagem-link a {
+    color: #fff;
+    text-decoration: none;
 }
 
-table td img {
-    height: 30px;
+ul li:hover .overlay-imagem-link {
+    opacity: 1;
 }
-
-
-

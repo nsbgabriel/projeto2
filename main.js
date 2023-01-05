@@ -1,37 +1,25 @@
-const form = document.getElementById('form-contato');
-const contato = [];
+$(document).ready(function() {
+    $('header button').click(function() {
+        $('form').slideDown()
+    })
 
-let linhas = '';
+    $('#botao-cancelar').click(function() {
+        $('form').slideUp();
+    })
 
-form.addEventListener('submit', function(e){
-    e.preventDefault();
-
-    adicionaLinha();
-    atualizaTabela();
+    $('form').on('submit', function(e) {
+        e.preventDefault();
+        const enderecoNovaImagem = $('#endereco-imagem-nova').val();
+        const novoItem = $('<li></li>');
+        $(`<img src="${enderecoNovaImagem}" />`).appendTo(novoItem);
+        $(`<div class="overlay-imagem-link">
+                <a href="${enderecoNovaImagem}" target="_blank" title="Ver imagem em tamanho real">
+                    Ver imagem em tamanho real
+                </a>
+            </div>
+        `).appendTo(novoItem);
+        $(novoItem).appendTo('ul');
+        $(novoItem).fadeIn(1000);
+        $('#endereco-imagem-nova').val('')
+    })
 })
-
-function adicionaLinha() {  
-    const inputNomeContato = document.getElementById('nome-contato')
-    const inputNumeroContato = document.getElementById('numero-contato')
-
-    if (contato.includes(inputNomeContato.value)) {
-        alert(`O contato: ${inputNomeContato.value} já foi adicionado`)
-    } else {
-        contato.push(inputNomeContato.value)
-
-        let linha = '<tr>'
-        linha += `<td>${inputNomeContato.value}</td>`
-        linha += `<td>${inputNumeroContato.value}</td>`
-        linha += '<tr>'
-
-        linhas += linha;
-    }
-
-    inputNomeContato.value = '';
-    inputNumeroContato.value = '';
-}
-
-function atualizaTabela() {
-    const corpoTabela = document.querySelector('tbody')
-    corpoTabela.innerHTML = linhas;
-}
